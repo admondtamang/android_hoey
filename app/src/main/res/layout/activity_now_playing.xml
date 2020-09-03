@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.NowPlaying">
+
+
+        <ImageView
+            android:id="@+id/imgAlbum"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:layout_marginTop="16dp"
+            android:padding="5dp"
+            android:src="@drawable/album"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSongName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="20dp"
+            android:text="Aladin - un mundo ideal"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgAlbum" />
+
+        <TextView
+            android:id="@+id/tvArtistName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="Becky G"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="@+id/tvSongName"
+            app:layout_constraintTop_toBottomOf="@+id/tvSongName" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/tvArtistName"
+            app:layout_constraintTop_toBottomOf="@+id/tvArtistName">
+
+            <TextView
+                android:id="@+id/tvPlayed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="3dp"
+                android:text="Played: "
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tvPlayedSong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_toRightOf="@+id/tvPlayed"
+                android:text=""
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/favourite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="28dp"
+            android:backgroundTint="@color/transparent"
+            android:src="@drawable/ic_favorite_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvArtistName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvSongName" />
+
+        <com.google.android.exoplayer2.ui.PlayerControlView
+            android:id="@+id/controlView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvArtistName" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleComment"
+            android:layout_width="match_parent"
+            android:paddingHorizontal="20dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/controlView" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add comment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycleComment" />
+        <!--    <SeekBar-->
+        <!--        android:id="@+id/seekBar"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginHorizontal="30dp"-->
+        <!--        android:layout_marginTop="52dp"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toBottomOf="@+id/controlPlay" />-->
+
+        <!--    <ImageButton-->
+        <!--        android:id="@+id/controlPlay"-->
+        <!--        android:layout_width="60dp"-->
+        <!--        android:layout_height="60dp"-->
+        <!--        android:layout_marginTop="76dp"-->
+        <!--        android:background="@drawable/ic_play"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintHorizontal_bias="0.498"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toBottomOf="@+id/tvSongName" />-->
+
+        <!--    <ImageButton-->
+        <!--        android:id="@+id/controlPrev"-->
+        <!--        android:layout_width="40dp"-->
+        <!--        android:layout_height="40dp"-->
+        <!--        android:background="@drawable/ic_prev"-->
+        <!--        app:layout_constraintBottom_toBottomOf="@+id/controlPlay"-->
+        <!--        app:layout_constraintEnd_toStartOf="@+id/controlPlay"-->
+        <!--        app:layout_constraintHorizontal_bias="0.718"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toTopOf="@+id/controlPlay"-->
+        <!--        app:layout_constraintVertical_bias="0.55" />-->
+
+        <!--    <ImageButton-->
+        <!--        android:id="@+id/controlNext"-->
+        <!--        android:layout_width="40dp"-->
+        <!--        android:layout_height="40dp"-->
+        <!--        android:background="@drawable/ic_next"-->
+        <!--        app:layout_constraintBottom_toBottomOf="@+id/controlPlay"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintHorizontal_bias="0.33"-->
+        <!--        app:layout_constraintStart_toEndOf="@+id/controlPlay"-->
+        <!--        app:layout_constraintTop_toTopOf="@+id/controlPlay"-->
+        <!--        app:layout_constraintVertical_bias="0.55" />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

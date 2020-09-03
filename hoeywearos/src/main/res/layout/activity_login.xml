@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        app:boxedEdges="all">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/imgLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"/>
+
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/imgLogo"
+                android:layout_marginTop="2dp"
+                android:hint="Username"
+                android:textSize="9sp" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/etUsername"
+                android:layout_marginTop="2dp"
+                android:hint="Password"
+                android:textSize="9sp" />
+
+            <ImageButton
+                android:id="@+id/btnLogin"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/etPassword"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:backgroundTint="#ff8f00"
+                android:src="@drawable/ic_arrow_forward_black_24dp" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff8f00</color>
+    <color name="colorPrimaryDark">#c56000</color>
+    <color name="colorAccent">#ffc046</color>
+    <color name="white">#fff</color>
+    <color name="transparent">#00000000</color>
+<color name="text_field">#E5E5E5</color>
+
+    //App intro
+    <color name="first">#04A50E</color>
+    <color name="second">#0673d3</color>
+    <color name="third">#383838</color>
+    <color name="black">#000</color>
+</resources>
